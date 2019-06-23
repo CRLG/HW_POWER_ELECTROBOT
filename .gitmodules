@@ -1,0 +1,3 @@
+[submodule "ext/KICAD_LIB"]
+	path = ext/KICAD_LIB
+	url = https://github.com/CRLG/KICAD_LIB.git
