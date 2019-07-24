@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name Convert_DCDC)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/Convert_DCDC.pretty)(options "")(descr ""))
+  (lib (name Dynamixel_AX)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/Dynamixel_AX.pretty)(options "")(descr ""))
+  (lib (name mbed)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/mbed.pretty)(options "")(descr ""))
+  (lib (name XT30)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/XT30.pretty)(options "")(descr ""))
+)
