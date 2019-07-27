@@ -6,4 +6,5 @@
   (lib (name CRLG-Passive)(type Legacy)(uri ${KIPRJMOD}/ext/KICAD_LIB/symbols/CRLG-Passive.lib)(options "")(descr ""))
   (lib (name CRLG-Connectors)(type Legacy)(uri ${KIPRJMOD}/ext/KICAD_LIB/symbols/CRLG-Connectors.lib)(options "")(descr ""))
   (lib (name CRLG-CPU)(type Legacy)(uri ${KIPRJMOD}/ext/KICAD_LIB/symbols/CRLG-CPU.lib)(options "")(descr ""))
+  (lib (name CRLG_Transistors)(type Legacy)(uri ${KIPRJMOD}/ext/KICAD_LIB/symbols/CRLG_Transistors.lib)(options "")(descr ""))
 )
