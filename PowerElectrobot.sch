@@ -1545,7 +1545,7 @@ P 6450 1150
 AR Path="/5D3C9FDA/5D4322CF" Ref="C?"  Part="1" 
 AR Path="/5D4322CF" Ref="C8"  Part="1" 
 F 0 "C8" H 6568 1196 50  0000 L CNN
-F 1 "100u" H 6568 1105 50  0000 L CNN
+F 1 "1u" H 6568 1105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 6488 1000 50  0001 C CNN
 F 3 "" H 6450 1150 50  0001 C CNN
 	1    6450 1150
@@ -1601,7 +1601,7 @@ AR Path="/5D3C9FDA/5D4CF0FB" Ref="C?"  Part="1"
 AR Path="/5D4CF0FB" Ref="C4"  Part="1" 
 F 0 "C4" H 3300 975 50  0000 L CNN
 F 1 "220u" H 3300 1025 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D10.0mm_H20.0mm_P5.00mm" H 3213 950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 3213 950 50  0001 C CNN
 F 3 "" H 3175 1100 50  0001 C CNN
 	1    3175 1100
 	1    0    0    -1  
@@ -1624,7 +1624,7 @@ AR Path="/5D3C9FDA/5D4F7071" Ref="C?"  Part="1"
 AR Path="/5D4F7071" Ref="C6"  Part="1" 
 F 0 "C6" H 4150 1000 50  0000 L CNN
 F 1 "220u" H 4150 925 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D10.0mm_H20.0mm_P5.00mm" H 4163 950 50  0001 C CNN
+F 2 "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 4163 950 50  0001 C CNN
 F 3 "" H 4125 1100 50  0001 C CNN
 	1    4125 1100
 	1    0    0    -1  
@@ -1693,4 +1693,8 @@ Wire Notes Line
 Text Notes 675  6350 0    50   ~ 0
 Reste 1 entrée ana
 NoConn ~ 1450 6325
+Text Notes 6525 1300 0    50   ~ 0
+RS: 903-8792
+Text Notes 3900 1500 0    50   ~ 0
+Condensateur 220µF\nRS: 766-0066
 $EndSCHEMATC
