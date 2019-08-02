@@ -4,4 +4,5 @@
   (lib (name mbed)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/mbed.pretty)(options "")(descr ""))
   (lib (name XT30)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/XT30.pretty)(options "")(descr ""))
   (lib (name XT60)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/XT60.pretty)(options "")(descr ""))
+  (lib (name Fuse)(type KiCad)(uri ${KIPRJMOD}/ext/KICAD_LIB/footprints/Fuse.pretty)(options "")(descr ""))
 )

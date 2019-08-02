@@ -15,331 +15,298 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text Notes 0    -150 0    50   ~ 0
-OBJECTIFS DE LA CARTE\n   - Mise en série des 2 packs batterie\n   - Protection batterie par fusible\n   - Equivalent de la PowerSwitch\n   - Mesure de tension batterie\n   - Connecteur XT60-M d'entrée VBATT\n   - Connecteur XT60-F pour la recharge batterie\n   - 2 sorties de puissance sur XT30-F avec chacune mesure de courant  (pour alimenter les ponts en H Gauche et Droit)\n   - Plusieurs connecteurs XT30-F pour redistribution du VBATT ailleur (vers AXIFACE, ELECTROBOT)\n   - Régulateur à découpage 5V/2.5A pour la RPI. Sortie 5V sur connecteur XT30 noir (à vérifier si ça existe)\n   - Voir pour un fusible sur le VBAT ?\n\n
+OBJECTIFS DE LA CARTE\n   - Protection batterie par fusible\n   - Equivalent de la PowerSwitch\n   - Mesure de tension batterie\n   - Connecteur XT60-M d'entrée VBATT\n   - 2 sorties de puissance sur XT30-F avec chacune mesure de courant  (pour alimenter les ponts en H Gauche et Droit)\n   - Plusieurs connecteurs XT30-F pour redistribution du VBATT ailleur (vers AXIFACE, ELECTROBOT)\n   - Régulateur à découpage 5V/2A pour la RPI. Sortie 5V sur connecteur XT30 noir (à vérifier si ça existe)\n   - Mesure de courant batterie\n\n
 $Comp
 L CRLG-Connectors:Conn_XT60M J2
 U 1 1 5D3897A8
-P 800 1000
-F 0 "J2" H 718 683 50  0000 C CNN
-F 1 "Conn_XT60M" H 718 774 50  0000 C CNN
-F 2 "XT60:XT-60_male" H 800 1000 50  0001 C CNN
-F 3 "" H 800 1000 50  0001 C CNN
-	1    800  1000
+P 700 1325
+F 0 "J2" H 618 1008 50  0000 C CNN
+F 1 "Conn_XT60M" H 618 1099 50  0000 C CNN
+F 2 "XT60:XT60UPB-M" H 700 1325 50  0001 C CNN
+F 3 "" H 700 1325 50  0001 C CNN
+	1    700  1325
 	-1   0    0    1   
 $EndComp
-Text Label 1000 900  0    50   ~ 0
-VBAT_1
+Text Label 900  1225 0    50   ~ 0
+VBAT_NP
 $Comp
 L CRLG_Regulators:TSR_2-2450 U2
 U 1 1 5D38B0C9
-P 3675 1025
-F 0 "U2" H 3925 875 50  0000 C CNN
-F 1 "TSR_2-2450" H 3675 1301 50  0000 C CNN
-F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 3675 875 50  0001 L CIN
-F 3 "" H 3675 1025 50  0001 C CNN
-	1    3675 1025
+P 6975 1050
+F 0 "U2" H 7225 900 50  0000 C CNN
+F 1 "TSR_2-2450" H 6975 1326 50  0000 C CNN
+F 2 "Convert_DCDC:Converter_DCDC_TRACO_TSR-2_THT" H 6975 900 50  0001 L CIN
+F 3 "" H 6975 1050 50  0001 C CNN
+	1    6975 1050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR010
 U 1 1 5D38BF24
-P 3675 1275
-F 0 "#PWR010" H 3675 1025 50  0001 C CNN
-F 1 "GND" H 3680 1102 50  0000 C CNN
-F 2 "" H 3675 1275 50  0001 C CNN
-F 3 "" H 3675 1275 50  0001 C CNN
-	1    3675 1275
+P 6975 1300
+F 0 "#PWR010" H 6975 1050 50  0001 C CNN
+F 1 "GND" H 6980 1127 50  0000 C CNN
+F 2 "" H 6975 1300 50  0001 C CNN
+F 3 "" H 6975 1300 50  0001 C CNN
+	1    6975 1300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3675 1225 3675 1250
-Text Label 4075 925  0    50   ~ 0
+	6975 1250 6975 1275
+Text Label 7375 950  0    50   ~ 0
 +5V
-Text Label 3100 925  0    50   ~ 0
-VBAT
 Wire Wire Line
-	3100 925  3175 925 
+	6400 950  6475 950 
 $Comp
 L CRLG-Connectors:Conn_XT30F J7
 U 1 1 5D38E5A8
-P 4600 1025
-F 0 "J7" H 4518 708 50  0000 C CNN
-F 1 "Conn_XT30F" H 4518 799 50  0000 C CNN
-F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 4600 1025 50  0001 C CNN
-F 3 "" H 4600 1025 50  0001 C CNN
-	1    4600 1025
+P 7900 1050
+F 0 "J7" H 7818 733 50  0000 C CNN
+F 1 "Conn_XT30F" H 7818 824 50  0000 C CNN
+F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 7900 1050 50  0001 C CNN
+F 3 "" H 7900 1050 50  0001 C CNN
+	1    7900 1050
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	4075 925  4125 925 
+	7375 950  7425 950 
 $Comp
 L power:GND #PWR013
 U 1 1 5D38EC85
-P 4400 1075
-F 0 "#PWR013" H 4400 825 50  0001 C CNN
-F 1 "GND" H 4405 902 50  0000 C CNN
-F 2 "" H 4400 1075 50  0001 C CNN
-F 3 "" H 4400 1075 50  0001 C CNN
-	1    4400 1075
+P 7700 1100
+F 0 "#PWR013" H 7700 850 50  0001 C CNN
+F 1 "GND" H 7705 927 50  0000 C CNN
+F 2 "" H 7700 1100 50  0001 C CNN
+F 3 "" H 7700 1100 50  0001 C CNN
+	1    7700 1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4400 1025 4400 1075
+	7700 1050 7700 1100
 Wire Notes Line
-	3050 625  4725 625 
+	6350 650  8025 650 
 Wire Notes Line
-	4725 625  4725 1525
+	8025 650  8025 1550
 Wire Notes Line
-	4725 1525 3050 1525
+	8025 1550 6350 1550
 Wire Notes Line
-	3050 1525 3050 625 
-Text Notes 3075 600  0    50   ~ 0
+	6350 1550 6350 650 
+Text Notes 6375 625  0    50   ~ 0
 Alimentation 5V pour Raspberry Pi
 $Comp
 L CRLG-Passive:R R1
 U 1 1 5D390072
-P 1200 2500
-F 0 "R1" H 1270 2546 50  0000 L CNN
-F 1 "91k" H 1270 2455 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 1130 2500 50  0001 C CNN
-F 3 "" H 1200 2500 50  0001 C CNN
-	1    1200 2500
+P 5100 1000
+F 0 "R1" H 5170 1046 50  0000 L CNN
+F 1 "91k" H 5170 955 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5030 1000 50  0001 C CNN
+F 3 "" H 5100 1000 50  0001 C CNN
+	1    5100 1000
 	1    0    0    -1  
 $EndComp
 $Comp
 L CRLG-Passive:R R2
 U 1 1 5D390423
-P 1200 2875
-F 0 "R2" H 1270 2921 50  0000 L CNN
-F 1 "18k" H 1270 2830 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 1130 2875 50  0001 C CNN
-F 3 "" H 1200 2875 50  0001 C CNN
-	1    1200 2875
+P 5100 1375
+F 0 "R2" H 5170 1421 50  0000 L CNN
+F 1 "18k" H 5170 1330 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5030 1375 50  0001 C CNN
+F 3 "" H 5100 1375 50  0001 C CNN
+	1    5100 1375
 	1    0    0    -1  
 $EndComp
 $Comp
 L CRLG-Passive:C C2
 U 1 1 5D390844
-P 1575 2875
-F 0 "C2" H 1690 2921 50  0000 L CNN
-F 1 "100n" H 1690 2830 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 1613 2725 50  0001 C CNN
-F 3 "" H 1575 2875 50  0001 C CNN
-	1    1575 2875
+P 5475 1375
+F 0 "C2" H 5590 1421 50  0000 L CNN
+F 1 "100n" H 5590 1330 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5513 1225 50  0001 C CNN
+F 3 "" H 5475 1375 50  0001 C CNN
+	1    5475 1375
 	1    0    0    -1  
 $EndComp
-Text Notes 550  2125 0    50   ~ 0
+Text Notes 4450 625  0    50   ~ 0
 Mesure de tension batterie\n20V batterie -> 3.3V sur le dsPIC
 $Comp
 L power:GND #PWR02
 U 1 1 5D3911B5
-P 1200 3100
-F 0 "#PWR02" H 1200 2850 50  0001 C CNN
-F 1 "GND" H 1205 2927 50  0000 C CNN
-F 2 "" H 1200 3100 50  0001 C CNN
-F 3 "" H 1200 3100 50  0001 C CNN
-	1    1200 3100
+P 5100 1600
+F 0 "#PWR02" H 5100 1350 50  0001 C CNN
+F 1 "GND" H 5105 1427 50  0000 C CNN
+F 2 "" H 5100 1600 50  0001 C CNN
+F 3 "" H 5100 1600 50  0001 C CNN
+	1    5100 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1200 3025 1575 3025
+	5100 1525 5475 1525
 Wire Wire Line
-	1200 3100 1200 3025
-Connection ~ 1200 3025
+	5100 1600 5100 1525
+Connection ~ 5100 1525
 Wire Wire Line
-	1200 2650 1200 2725
+	5100 1150 5100 1225
 Wire Wire Line
-	1575 2725 1200 2725
-Connection ~ 1200 2725
+	5475 1225 5100 1225
+Connection ~ 5100 1225
 Wire Wire Line
-	1200 2350 1200 2275
+	5100 850  5100 775 
 Wire Wire Line
-	1200 2275 950  2275
-Text Label 950  2275 0    50   ~ 0
+	5100 775  4850 775 
+Text Label 4850 775  0    50   ~ 0
 VBAT
 Wire Wire Line
-	1200 2725 850  2725
-Text Label 850  2725 0    50   ~ 0
+	5100 1225 4750 1225
+Text Label 4750 1225 0    50   ~ 0
 VBAT_f
-Text Notes 3175 1850 0    50   ~ 0
+Text Notes 4300 1950 0    50   ~ 0
 Distribution des alimentations VBAT
 $Comp
 L CRLG-Connectors:Conn_XT30F J6
 U 1 1 5D394D51
-P 4325 3025
-F 0 "J6" H 4300 3150 50  0000 C CNN
-F 1 "Conn_XT30F" H 4400 2825 50  0000 C CNN
-F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 4325 3025 50  0001 C CNN
-F 3 "" H 4325 3025 50  0001 C CNN
-	1    4325 3025
+P 5450 3125
+F 0 "J6" H 5425 3250 50  0000 C CNN
+F 1 "Conn_XT30F" H 5525 2925 50  0000 C CNN
+F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 5450 3125 50  0001 C CNN
+F 3 "" H 5450 3125 50  0001 C CNN
+	1    5450 3125
 	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5D395BF6
-P 4125 3075
-F 0 "#PWR012" H 4125 2825 50  0001 C CNN
-F 1 "GND" H 4130 2902 50  0000 C CNN
-F 2 "" H 4125 3075 50  0001 C CNN
-F 3 "" H 4125 3075 50  0001 C CNN
-	1    4125 3075
+P 5250 3175
+F 0 "#PWR012" H 5250 2925 50  0001 C CNN
+F 1 "GND" H 5255 3002 50  0000 C CNN
+F 2 "" H 5250 3175 50  0001 C CNN
+F 3 "" H 5250 3175 50  0001 C CNN
+	1    5250 3175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4125 2925 4125 2750
+	5250 3025 5250 2850
 Wire Wire Line
-	4125 2750 3975 2750
-Text Label 3975 2750 0    50   ~ 0
+	5250 2850 5100 2850
+Text Label 5100 2850 0    50   ~ 0
 VBAT
 Wire Wire Line
-	4125 3025 4125 3075
+	5250 3125 5250 3175
 $Comp
 L CRLG-Connectors:Conn_XT30F J5
 U 1 1 5D399522
-P 4325 2300
-F 0 "J5" H 4300 2425 50  0000 C CNN
-F 1 "Conn_XT30F" H 4400 2100 50  0000 C CNN
-F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 4325 2300 50  0001 C CNN
-F 3 "" H 4325 2300 50  0001 C CNN
-	1    4325 2300
+P 5450 2400
+F 0 "J5" H 5425 2525 50  0000 C CNN
+F 1 "Conn_XT30F" H 5525 2200 50  0000 C CNN
+F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 5450 2400 50  0001 C CNN
+F 3 "" H 5450 2400 50  0001 C CNN
+	1    5450 2400
 	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR011
 U 1 1 5D399528
-P 4125 2350
-F 0 "#PWR011" H 4125 2100 50  0001 C CNN
-F 1 "GND" H 4130 2177 50  0000 C CNN
-F 2 "" H 4125 2350 50  0001 C CNN
-F 3 "" H 4125 2350 50  0001 C CNN
-	1    4125 2350
+P 5250 2450
+F 0 "#PWR011" H 5250 2200 50  0001 C CNN
+F 1 "GND" H 5255 2277 50  0000 C CNN
+F 2 "" H 5250 2450 50  0001 C CNN
+F 3 "" H 5250 2450 50  0001 C CNN
+	1    5250 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4125 2200 4125 2025
+	5250 2300 5250 2125
 Wire Wire Line
-	4125 2025 3975 2025
-Text Label 3975 2025 0    50   ~ 0
+	5250 2125 5100 2125
+Text Label 5100 2125 0    50   ~ 0
 VBAT
 Wire Wire Line
-	4125 2300 4125 2350
+	5250 2400 5250 2450
 $Comp
 L CRLG-Connectors:Conn_XT30F J3
 U 1 1 5D399B36
-P 3600 2300
-F 0 "J3" H 3575 2425 50  0000 C CNN
-F 1 "Conn_XT30F" H 3675 2100 50  0000 C CNN
-F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 3600 2300 50  0001 C CNN
-F 3 "" H 3600 2300 50  0001 C CNN
-	1    3600 2300
+P 4725 2400
+F 0 "J3" H 4700 2525 50  0000 C CNN
+F 1 "Conn_XT30F" H 4800 2200 50  0000 C CNN
+F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 4725 2400 50  0001 C CNN
+F 3 "" H 4725 2400 50  0001 C CNN
+	1    4725 2400
 	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5D399B3C
-P 3400 2350
-F 0 "#PWR07" H 3400 2100 50  0001 C CNN
-F 1 "GND" H 3405 2177 50  0000 C CNN
-F 2 "" H 3400 2350 50  0001 C CNN
-F 3 "" H 3400 2350 50  0001 C CNN
-	1    3400 2350
+P 4525 2450
+F 0 "#PWR07" H 4525 2200 50  0001 C CNN
+F 1 "GND" H 4530 2277 50  0000 C CNN
+F 2 "" H 4525 2450 50  0001 C CNN
+F 3 "" H 4525 2450 50  0001 C CNN
+	1    4525 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 2200 3400 2025
+	4525 2300 4525 2125
 Wire Wire Line
-	3400 2025 3250 2025
-Text Label 3250 2025 0    50   ~ 0
+	4525 2125 4375 2125
+Text Label 4375 2125 0    50   ~ 0
 VBAT
 Wire Wire Line
-	3400 2300 3400 2350
+	4525 2400 4525 2450
 Wire Wire Line
-	3400 3025 3400 3075
-Text Label 3250 2750 0    50   ~ 0
+	4525 3125 4525 3175
+Text Label 4375 2850 0    50   ~ 0
 VBAT
 Wire Wire Line
-	3400 2750 3250 2750
+	4525 2850 4375 2850
 Wire Wire Line
-	3400 2925 3400 2750
+	4525 3025 4525 2850
 $Comp
 L power:GND #PWR08
 U 1 1 5D39A5DE
-P 3400 3075
-F 0 "#PWR08" H 3400 2825 50  0001 C CNN
-F 1 "GND" H 3405 2902 50  0000 C CNN
-F 2 "" H 3400 3075 50  0001 C CNN
-F 3 "" H 3400 3075 50  0001 C CNN
-	1    3400 3075
+P 4525 3175
+F 0 "#PWR08" H 4525 2925 50  0001 C CNN
+F 1 "GND" H 4530 3002 50  0000 C CNN
+F 2 "" H 4525 3175 50  0001 C CNN
+F 3 "" H 4525 3175 50  0001 C CNN
+	1    4525 3175
 	1    0    0    -1  
 $EndComp
 $Comp
 L CRLG-Connectors:Conn_XT30F J4
 U 1 1 5D39A5D8
-P 3600 3025
-F 0 "J4" H 3575 3150 50  0000 C CNN
-F 1 "Conn_XT30F" H 3675 2825 50  0000 C CNN
-F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 3600 3025 50  0001 C CNN
-F 3 "" H 3600 3025 50  0001 C CNN
-	1    3600 3025
+P 4725 3125
+F 0 "J4" H 4700 3250 50  0000 C CNN
+F 1 "Conn_XT30F" H 4800 2925 50  0000 C CNN
+F 2 "XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical" H 4725 3125 50  0001 C CNN
+F 3 "" H 4725 3125 50  0001 C CNN
+	1    4725 3125
 	1    0    0    1   
 $EndComp
-$Comp
-L CRLG-Connectors:Conn_XT60M J1
-U 1 1 5D3A787B
-P 775 1525
-F 0 "J1" H 693 1208 50  0000 C CNN
-F 1 "Conn_XT60M" H 693 1299 50  0000 C CNN
-F 2 "XT60:XT-60_male" H 775 1525 50  0001 C CNN
-F 3 "" H 775 1525 50  0001 C CNN
-	1    775  1525
-	-1   0    0    1   
-$EndComp
-Text Label 975  1425 0    50   ~ 0
-VBAT_2
-Text Label 975  1525 0    50   ~ 0
-GND_BAT_2
-Text Label 1000 1000 0    50   ~ 0
-GND_BAT_1
-Text Label 1700 900  0    50   ~ 0
-VBAT
-Wire Wire Line
-	1425 1000 1425 1425
-Wire Wire Line
-	975  1425 1425 1425
-Wire Wire Line
-	1000 1000 1425 1000
+Text Label 1600 1225 0    50   ~ 0
+VBAT_P
 $Comp
 L power:GND #PWR04
 U 1 1 5D3B3227
-P 1875 1550
-F 0 "#PWR04" H 1875 1300 50  0001 C CNN
-F 1 "GND" H 1880 1377 50  0000 C CNN
-F 2 "" H 1875 1550 50  0001 C CNN
-F 3 "" H 1875 1550 50  0001 C CNN
-	1    1875 1550
+P 975 1325
+F 0 "#PWR04" H 975 1075 50  0001 C CNN
+F 1 "GND" H 980 1152 50  0000 C CNN
+F 2 "" H 975 1325 50  0001 C CNN
+F 3 "" H 975 1325 50  0001 C CNN
+	1    975  1325
 	1    0    0    -1  
 $EndComp
-Text Notes 1500 1300 0    50   ~ 0
-Mise en série des 2 batteries\nCas d'un seul pack : Relier \nVBAT_2 à GND avec un \nbouchon
 $Comp
 L Device:Fuse F1
 U 1 1 5D3BD540
-P 1525 900
-F 0 "F1" V 1328 900 50  0000 C CNN
-F 1 "Fuse" V 1419 900 50  0000 C CNN
-F 2 "" V 1455 900 50  0001 C CNN
-F 3 "~" H 1525 900 50  0001 C CNN
-	1    1525 900 
+P 1425 1225
+F 0 "F1" V 1228 1225 50  0000 C CNN
+F 1 "Fuse" V 1319 1225 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Schurter-5x20mm" V 1355 1225 50  0001 C CNN
+F 3 "~" H 1425 1225 50  0001 C CNN
+	1    1425 1225
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1000 900  1375 900 
-Wire Wire Line
-	1675 900  1875 900 
-Wire Wire Line
-	1875 1525 1875 1550
-Wire Wire Line
-	975  1525 1875 1525
+	900  1225 1275 1225
 $Comp
 L Sensor_Current:ACS712xLCTR-05B U4
 U 1 1 5D3C4C46
@@ -1053,7 +1020,7 @@ Wire Wire Line
 Text Label 6550 4100 0    50   ~ 0
 VBAT
 Text Notes 5900 -400 0    50   ~ 0
-TODO : \n  - Vérifier si c'était VBAT qui alimentait les sorties de puissances sur la POWER_SWITCH ou si ça passait par un régulateur\n  - Trancher : fusible ou non pour protéger VBAT et créer le footprint associé\n  - Possibilité de gagner de la place sur la carte en supprimant le connecteur de programmation du dsPIC (boitier DIP pour pouvoir dépanner rapidement la carte si besoin)\n  - Vérifier footpint du XT60
+TODO : \n  - Possibilité de gagner de la place sur la carte en supprimant le connecteur de programmation du dsPIC (boitier DIP pour pouvoir dépanner rapidement la carte si besoin)\n  - Vérifier footpint du XT60\n  - Appro XT60 à souder sur PCB
 $Comp
 L CRLG_Transistors:BTS117 Q3
 U 1 1 5D5AC348
@@ -1509,178 +1476,168 @@ Wire Wire Line
 	6275 7275 6275 7350
 Wire Wire Line
 	6650 7275 6650 7350
-Text Label 5375 950  0    50   ~ 0
+Text Label 8675 975  0    50   ~ 0
 +5V
 Wire Wire Line
-	5350 1300 5925 1300
+	8650 1325 9225 1325
 Wire Wire Line
-	5350 1000 5350 950 
+	8650 1025 8650 975 
 $Comp
 L CRLG-Passive:CP C?
 U 1 1 5D4322DB
-P 5350 1150
+P 8650 1175
 AR Path="/5D3C9FDA/5D4322DB" Ref="C?"  Part="1" 
 AR Path="/5D4322DB" Ref="C7"  Part="1" 
-F 0 "C7" H 5468 1196 50  0000 L CNN
-F 1 "100u" H 5468 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 5388 1000 50  0001 C CNN
-F 3 "" H 5350 1150 50  0001 C CNN
-	1    5350 1150
+F 0 "C7" H 8768 1221 50  0000 L CNN
+F 1 "1u" H 8768 1130 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 8688 1025 50  0001 C CNN
+F 3 "" H 8650 1175 50  0001 C CNN
+	1    8650 1175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5925 1300 5925 1325
-Connection ~ 5925 1300
+	9225 1325 9225 1350
+Connection ~ 9225 1325
 Wire Wire Line
-	6450 1300 5925 1300
+	9750 1325 9225 1325
 Wire Wire Line
-	6450 950  6775 950 
-Connection ~ 6450 950 
+	9750 975  10075 975 
+Connection ~ 9750 975 
 Wire Wire Line
-	6450 1000 6450 950 
+	9750 1025 9750 975 
 $Comp
 L CRLG-Passive:CP C?
 U 1 1 5D4322CF
-P 6450 1150
+P 9750 1175
 AR Path="/5D3C9FDA/5D4322CF" Ref="C?"  Part="1" 
 AR Path="/5D4322CF" Ref="C8"  Part="1" 
-F 0 "C8" H 6568 1196 50  0000 L CNN
-F 1 "1u" H 6568 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 6488 1000 50  0001 C CNN
-F 3 "" H 6450 1150 50  0001 C CNN
-	1    6450 1150
+F 0 "C8" H 9868 1221 50  0000 L CNN
+F 1 "1u" H 9868 1130 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 9788 1025 50  0001 C CNN
+F 3 "" H 9750 1175 50  0001 C CNN
+	1    9750 1175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6225 950  6450 950 
-Text Label 6300 950  0    50   ~ 0
+	9525 975  9750 975 
+Text Label 9600 975  0    50   ~ 0
 3.3V_dsPIC
 Wire Wire Line
-	5925 1250 5925 1300
+	9225 1275 9225 1325
 $Comp
 L power:GND #PWR?
 U 1 1 5D4322C6
-P 5925 1325
+P 9225 1350
 AR Path="/5D3C9FDA/5D4322C6" Ref="#PWR?"  Part="1" 
 AR Path="/5D4322C6" Ref="#PWR017"  Part="1" 
-F 0 "#PWR017" H 5925 1075 50  0001 C CNN
-F 1 "GND" H 5925 1175 50  0000 C CNN
-F 2 "" H 5925 1325 50  0000 C CNN
-F 3 "" H 5925 1325 50  0000 C CNN
-	1    5925 1325
+F 0 "#PWR017" H 9225 1100 50  0001 C CNN
+F 1 "GND" H 9225 1200 50  0000 C CNN
+F 2 "" H 9225 1350 50  0000 C CNN
+F 3 "" H 9225 1350 50  0000 C CNN
+	1    9225 1350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 950  5625 950 
+	8650 975  8925 975 
 $Comp
 L CRLG_Regulators:MCP1804x-3302xDB U?
 U 1 1 5D4322BF
-P 5925 950
+P 9225 975
 AR Path="/5D3C9FDA/5D4322BF" Ref="U?"  Part="1" 
 AR Path="/5D4322BF" Ref="U3"  Part="1" 
-F 0 "U3" H 5925 1192 50  0000 C CNN
-F 1 "MCP1804x-3302xDB" H 5925 1101 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5925 1150 50  0001 C CNN
-F 3 "" H 5925 950 50  0001 C CNN
-	1    5925 950 
+F 0 "U3" H 9225 1217 50  0000 C CNN
+F 1 "MCP1804x-3302xDB" H 9225 1126 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9225 1175 50  0001 C CNN
+F 3 "" H 9225 975 50  0001 C CNN
+	1    9225 975 
 	1    0    0    -1  
 $EndComp
 Text Notes 6925 4750 0    50   ~ 0
 RS: 110-7758
 Text Notes 6500 2275 0    50   ~ 0
 RS: 680-7131
-Text Notes 6000 750  0    50   ~ 0
+Text Notes 9300 775  0    50   ~ 0
 RS: 823-4396
-Text Notes 3425 700  0    50   ~ 0
+Text Notes 6725 725  0    50   ~ 0
 RS: 906-8487
 $Comp
 L CRLG-Passive:CP C?
 U 1 1 5D4CF0FB
-P 3175 1100
+P 6475 1125
 AR Path="/5D3C9FDA/5D4CF0FB" Ref="C?"  Part="1" 
 AR Path="/5D4CF0FB" Ref="C4"  Part="1" 
-F 0 "C4" H 3300 975 50  0000 L CNN
-F 1 "220u" H 3300 1025 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 3213 950 50  0001 C CNN
-F 3 "" H 3175 1100 50  0001 C CNN
-	1    3175 1100
+F 0 "C4" H 6600 1000 50  0000 L CNN
+F 1 "220u" H 6600 1050 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 6513 975 50  0001 C CNN
+F 3 "" H 6475 1125 50  0001 C CNN
+	1    6475 1125
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3175 950  3175 925 
-Connection ~ 3175 925 
+	6475 975  6475 950 
+Connection ~ 6475 950 
 Wire Wire Line
-	3175 925  3275 925 
+	6475 950  6575 950 
 Wire Wire Line
-	3175 1250 3675 1250
-Connection ~ 3675 1250
+	6475 1275 6975 1275
+Connection ~ 6975 1275
 Wire Wire Line
-	3675 1250 3675 1275
+	6975 1275 6975 1300
 $Comp
 L CRLG-Passive:CP C?
 U 1 1 5D4F7071
-P 4125 1100
+P 7425 1125
 AR Path="/5D3C9FDA/5D4F7071" Ref="C?"  Part="1" 
 AR Path="/5D4F7071" Ref="C6"  Part="1" 
-F 0 "C6" H 4150 1000 50  0000 L CNN
-F 1 "220u" H 4150 925 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 4163 950 50  0001 C CNN
-F 3 "" H 4125 1100 50  0001 C CNN
-	1    4125 1100
+F 0 "C6" H 7450 1025 50  0000 L CNN
+F 1 "220u" H 7450 950 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D8.0mm_H11.5mm_P3.50mm" H 7463 975 50  0001 C CNN
+F 3 "" H 7425 1125 50  0001 C CNN
+	1    7425 1125
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4125 950  4125 925 
-Connection ~ 4125 925 
+	7425 975  7425 950 
+Connection ~ 7425 950 
 Wire Wire Line
-	4125 925  4400 925 
+	7425 950  7700 950 
 Wire Wire Line
-	4125 1250 3675 1250
-Text Notes 5300 1700 0    50   ~ 0
-Condensateurs 100uF/10V 1206 \nRS: 788-3057
+	7425 1275 6975 1275
 Wire Notes Line
-	3175 1900 4675 1900
+	4300 2000 5800 2000
 Wire Notes Line
-	4675 3375 3175 3375
+	5800 3475 4300 3475
 Wire Notes Line
-	3175 1900 3175 3375
+	4300 2000 4300 3475
 Wire Notes Line
-	4675 1900 4675 3375
+	5800 2000 5800 3475
 Text Notes 6675 6425 2    50   ~ 0
 Mounting Holes
-Text Notes 550  2525 0    50   ~ 0
+Text Notes 4450 1025 0    50   ~ 0
 RS: 866-2996
-Text Notes 575  2900 0    50   ~ 0
+Text Notes 4475 1400 0    50   ~ 0
 RS: 679-1831
 Wire Notes Line
-	525  2150 525  3300
+	4425 650  4425 1800
 Wire Notes Line
-	525  3300 2050 3300
+	4425 1800 5950 1800
 Wire Notes Line
-	2050 3300 2050 2150
+	5950 1800 5950 650 
 Wire Notes Line
-	2050 2150 525  2150
-Wire Notes Line
-	2675 1775 575  1775
-Wire Notes Line
-	575  1775 575  650 
-Wire Notes Line
-	575  650  2675 650 
-Wire Notes Line
-	2675 650  2675 1775
-Text Notes 575  625  0    50   ~ 0
+	5950 650  4425 650 
+Text Notes 500  600  0    50   ~ 0
 Mise en série des batteries + protection
 Wire Notes Line
-	5200 1675 5200 650 
+	8500 1700 8500 675 
 Wire Notes Line
-	5200 650  6875 650 
+	8500 675  10175 675 
 Wire Notes Line
-	6875 650  6875 1725
+	10175 675  10175 1750
 Wire Notes Line
-	6875 1725 5200 1725
+	10175 1750 8500 1750
 Wire Notes Line
-	5200 1725 5200 1700
-Text Notes 5200 625  0    50   ~ 0
+	8500 1750 8500 1725
+Text Notes 8500 650  0    50   ~ 0
 Alimentation 3.3V pour dsPIC
 Wire Notes Line
 	6875 7625 6875 6450
@@ -1690,11 +1647,121 @@ Wire Notes Line
 	6100 6450 6875 6450
 Wire Notes Line
 	6100 7625 6875 7625
-Text Notes 675  6350 0    50   ~ 0
-Reste 1 entrée ana
-NoConn ~ 1450 6325
-Text Notes 6525 1300 0    50   ~ 0
-RS: 903-8792
-Text Notes 3900 1500 0    50   ~ 0
+Text Notes 8550 1700 0    50   ~ 0
+Condensateur 1µF\nRS: 903-8792
+Text Notes 7200 1525 0    50   ~ 0
 Condensateur 220µF\nRS: 766-0066
+$Comp
+L Sensor_Current:ACS712xLCTR-20A U6
+U 1 1 5D6C414B
+P 2525 1425
+F 0 "U6" H 2775 1075 50  0000 C CNN
+F 1 "ACS712xLCTR-20A" H 2075 1025 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2625 1075 50  0001 L CIN
+F 3 "http://www.allegromicro.com/~/media/Files/Datasheets/ACS712-Datasheet.ashx?la=en" H 2525 1425 50  0001 C CNN
+	1    2525 1425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 5D6C4151
+P 2525 1875
+F 0 "#PWR036" H 2525 1625 50  0001 C CNN
+F 1 "GND" H 2530 1702 50  0000 C CNN
+F 2 "" H 2525 1875 50  0001 C CNN
+F 3 "" H 2525 1875 50  0001 C CNN
+	1    2525 1875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2525 1825 2525 1875
+Text Label 2225 725  0    50   ~ 0
++5V
+Wire Wire Line
+	2925 1425 3275 1425
+Text Label 2975 1425 0    50   ~ 0
+MEAS_CURR_VBAT
+$Comp
+L CRLG-Passive:C C14
+U 1 1 5D6C4169
+P 3125 1700
+F 0 "C14" H 3010 1654 50  0000 R CNN
+F 1 "1n" H 3010 1745 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3163 1550 50  0001 C CNN
+F 3 "" H 3125 1700 50  0001 C CNN
+	1    3125 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2525 1875 3125 1875
+Wire Wire Line
+	3125 1875 3125 1850
+Connection ~ 2525 1875
+Wire Wire Line
+	2925 1525 3125 1525
+Wire Wire Line
+	3125 1525 3125 1550
+$Comp
+L power:GND #PWR037
+U 1 1 5D6C4174
+P 2900 950
+F 0 "#PWR037" H 2900 700 50  0001 C CNN
+F 1 "GND" H 2905 777 50  0000 C CNN
+F 2 "" H 2900 950 50  0001 C CNN
+F 3 "" H 2900 950 50  0001 C CNN
+	1    2900 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2525 1025 2525 900 
+$Comp
+L CRLG-Passive:C C13
+U 1 1 5D6C417B
+P 2750 900
+F 0 "C13" V 2950 950 50  0000 C CNN
+F 1 "100n" V 2875 900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2788 750 50  0001 C CNN
+F 3 "" H 2750 900 50  0001 C CNN
+	1    2750 900 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2525 725  2225 725 
+Wire Wire Line
+	2525 900  2600 900 
+Connection ~ 2525 900 
+Wire Wire Line
+	2525 900  2525 725 
+Wire Wire Line
+	2900 900  2900 950 
+Wire Wire Line
+	1625 1625 2125 1625
+Text Label 1625 1625 0    50   ~ 0
+VBAT
+Text Notes 1850 1975 0    50   ~ 0
+RS: 680-7135
+Wire Wire Line
+	900  1325 975  1325
+Wire Wire Line
+	1575 1225 2125 1225
+Text Label 6400 950  0    50   ~ 0
+VBAT
+Text Notes 2000 2150 0    50   ~ 0
+Mesure de courant sur VBAT
+Wire Notes Line
+	3675 625  3675 2175
+Wire Notes Line
+	3675 2175 500  2175
+Wire Notes Line
+	500  2175 500  625 
+Wire Notes Line
+	500  625  3675 625 
+Text Label 800  6325 0    50   ~ 0
+MEAS_CURR_VBAT
+Wire Wire Line
+	1450 6325 800  6325
+Text Notes 1125 975  0    50   ~ 0
+Porte fusible : RS 176-9047\nFusible : RS 789-7808\n
+Text Notes 550  1650 0    50   ~ 0
+RS: 180-5372
 $EndSCHEMATC
