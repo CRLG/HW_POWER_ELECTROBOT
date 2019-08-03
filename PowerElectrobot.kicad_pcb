@@ -34,12 +34,14 @@
   )
 
   (setup
-    (last_trace_width 1.5)
+    (last_trace_width 0.25)
     (user_trace_width 0.5)
     (user_trace_width 0.75)
     (user_trace_width 1)
     (user_trace_width 1.5)
     (user_trace_width 2)
+    (user_trace_width 2.5)
+    (user_trace_width 3)
     (trace_clearance 0.2)
     (zone_clearance 0.508)
     (zone_45_only no)
@@ -48,6 +50,7 @@
     (via_drill 0.4)
     (via_min_size 0.4)
     (via_min_drill 0.3)
+    (user_via 1.2 0.6)
     (uvia_size 0.3)
     (uvia_drill 0.1)
     (uvias_allowed no)
@@ -976,7 +979,7 @@
   )
 
   (module XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical (layer F.Cu) (tedit 5C8E9B79) (tstamp 5D44BDFF)
-    (at 124.46 117.602 90)
+    (at 116.332 117.602 90)
     (descr "Connector XT30 Vertical PCB Female, https://www.tme.eu/en/Document/4acc913878197f8c2e30d4b8cdc47230/XT30UPB%20SPEC.pdf")
     (tags "RC Connector XT30")
     (path /5D399522)
@@ -1025,7 +1028,7 @@
   )
 
   (module XT30:AMASS_XT30UPB-F_1x02_P5.0mm_Vertical (layer F.Cu) (tedit 5C8E9B79) (tstamp 5D44EB13)
-    (at 115.57 117.545001 90)
+    (at 125.73 117.602 90)
     (descr "Connector XT30 Vertical PCB Female, https://www.tme.eu/en/Document/4acc913878197f8c2e30d4b8cdc47230/XT30UPB%20SPEC.pdf")
     (tags "RC Connector XT30")
     (path /5D394D51)
@@ -1191,7 +1194,7 @@
     (descr "Molex KK-254 Interconnect System, old/engineering part number: AE-6410-04A example for new part number: 22-27-2041, 4 Pins (http://www.molex.com/pdm_docs/sd/022272021_sd.pdf), generated with kicad-footprint-generator")
     (tags "connector Molex KK-254 side entry")
     (path /5D46051B)
-    (fp_text reference J9 (at 3.81 -4.12 90) (layer F.SilkS)
+    (fp_text reference J9 (at -2.794 -0.254 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Conn_01x04 (at 3.81 4.08 90) (layer F.Fab)
@@ -2648,7 +2651,7 @@
 
   (gr_circle (center 120.396 101.6) (end 120.523 101.6) (layer B.SilkS) (width 0.5) (tstamp 5D44CFB3))
   (gr_circle (center 120.396 92.964) (end 120.523 92.964) (layer B.SilkS) (width 0.5))
-  (gr_text "POWER ELECTROBOT\nV1.0" (at 140.462 113.538) (layer F.SilkS)
+  (gr_text "POWER ELECTROBOT\nV1.0" (at 141.986 113.538) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.15)))
   )
 
