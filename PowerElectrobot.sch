@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:PowerElectrobot-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -738,7 +737,7 @@ P 1375 6825
 AR Path="/5D3C9FDA/5D457B53" Ref="R?"  Part="1" 
 AR Path="/5D457B53" Ref="R4"  Part="1" 
 F 0 "R4" V 1475 6775 50  0000 L CNN
-F 1 "4.7k" V 1550 6775 50  0000 L CNN
+F 1 "470" V 1550 6775 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 1305 6825 50  0001 C CNN
 F 3 "" H 1375 6825 50  0001 C CNN
 	1    1375 6825
